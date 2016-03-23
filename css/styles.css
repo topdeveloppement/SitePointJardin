@@ -1,0 +1,13 @@
+/*Permet de d'inclure les paddings et les bordures dans le width et le height*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-size: 16px;
+}
