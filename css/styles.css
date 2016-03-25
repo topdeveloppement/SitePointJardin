@@ -1,13 +1,771 @@
+@charset "UTF-8";
+/*-----------------------------------------------------------------*\
+*															  		*
+*	LES PROPRI├ëT├ëS SI DESSOUS S'APPLIQUE UNIQUEMENT AU CONTENEUR	*
+*															  		*		
+\*-----------------------------------------------------------------*/
+/*
+*
+*Avec la propri├®t├® display: et l'attribut flex le conteneur prendra toute la largeur disponible de la fenetre.
+*Avec la propri├®t├® flex-direction: et l'attribut column les elements qui vont ce trouver a l'interieur du conteneur, vont ce positionner les un en dessous des autres.
+*Avec l'attribut column-reverse le flux sera invers├®.
+*
+*/
+.flex_col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex_col-r {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+/*
+*
+*Avec la propri├®t├® display: et l'attribut flex le conteneur prendra toute la largeur disponible de la fenetre.
+*Avec la propri├®t├® flex-direction: et l'attribut row les elements qui vont ce trouver a l'interieur du conteneur, vont ce positionner les un a coter des autres.
+*C'est le comportement par default.
+*Avec l'attribut row-reverse le flux sera invers├®.
+*
+*/
+.flex_row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.flex_row-r {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+/*
+*
+*Avec la propri├®t├® display: et l'attribut inline-flex le conteneur n'aura pas de largeur, ca largeur dependera de celle que on va lui fixer ou de ces elements enfant.
+*Avec la propri├®t├® flex-direction: et l'attribut column les elements qui vont ce trouver a l'interieur du conteneur, vont ce positionner les un en dessous des autres.
+*Avec l'attribut column-reverse le flux sera invers├®.
+*
+*/
+.in_flex_col {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.in_flex_col-r {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+/*
+*
+*Avec la propri├®t├® display: et l'attribut inline-flex le conteneur n'aura pas de largeur, ca largeur dependera de celle que on va lui fixer ou de ces elements enfant.
+*Avec la propri├®t├® flex-direction: et l'attribut row les elements qui vont ce trouver a l'interieur du conteneur, vont ce positionner les un a coter des autres.
+*C'est le comportement par default.
+*Avec l'attribut row-reverse le flux sera invers├®.
+*
+*/
+.in_flex_row {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.in_flex_row-r {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+/*
+*La propri├®t├® Justify-content
+*
+*Permet de positionner les elements enfants avec plusieur posibilit├®, en fonction de la propri├®t├® flex-direction.
+*Justify-content avec l'attribut flex-start et le comportement par default.
+*/
+.ju_con-fs {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.ju_con-fe {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.ju_con-c {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.ju_con-sa {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.ju_con-sb {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/*
+*La propri├®t├® Align-items
+*
+Permet de positionner les elements enfants avec plusieur posibilit├®, en fonction de la propri├®t├® flex-direction.
+*Align-items avec l'attribut stretch et le comportement par default.
+*
+*/
+.al_it-fs {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.al_it-fe {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.al_it-c {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.al_it-ba {
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.al_it-st {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+/*
+*Align-content
+*
+*Permet de positionner les elements enfants avec plusieur posibilit├®.
+*En fonction du Flex-direction.
+*
+*/
+.al_con-fs {
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.al_con-fe {
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.al_con-c {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.al_con-sb {
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+}
+
+.al_con-sa {
+  -webkit-align-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+}
+
+.al_con-st {
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+/*
+*Flex-wrap
+*
+*Permet de positionner les elements enfants avec plusieur posibilit├®.
+*En fonction du Flex-direction.
+*
+*/
+.flex_w {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex_n-w {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.flex_w-r {
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+/*-----------------------------------------------------------------*\
+*															  		*
+*	 LES PROPRI├ëT├ëS SI DESSOUS S'APPLIQUE UNIQUEMENT AUX ITEMS   	*
+*															  		*		
+\*-----------------------------------------------------------------*/
+.al_sel-auto {
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.al_sel-fs {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.al_sel-fe {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.al_sel-c {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.al_sel-st {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.al_sel-ba {
+  -webkit-align-self: baseline;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+.al_sel-ini {
+  -webkit-align-self: initial;
+  -ms-flex-item-align: initial;
+  align-self: initial;
+}
+
+.al_sel-inh {
+  -webkit-align-self: inherit;
+  -ms-flex-item-align: inherit;
+  align-self: inherit;
+}
+
 /*Permet de d'inclure les paddings et les bordures dans le width et le height*/
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  display: flex;
   font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  background-color: rgba(186, 218, 85, 0.6);
+}
+
+.container__header {
+  height: 200px;
+  background-color: #BADA55;
+}
+
+.header {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header-logo {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 290px;
+  height: 100%;
+}
+.header-logo a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.header-logo a img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 30px 40px;
+}
+
+.header-title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 400px;
+  height: 100%;
+  line-height: 200px;
+  text-align: center;
+}
+.header-title h1 {
+  font-size: 32px;
+  color: #D33257;
+  -webkit-transform: rotate(-6deg);
+  -ms-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+
+.header-contact {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: 290px;
+  height: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+.header-contact h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #45362E;
+}
+.header-contact p {
+  font-size: 14px;
+}
+.header-contact div {
+  height: auto;
+  padding: 4px 0;
+}
+.header-contact div img {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+}
+.header-contact div span {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 28px;
+}
+
+.container__menu {
+  height: 60px;
+  background-color: #BADA55;
+  border-bottom: solid 6px #D33257;
+}
+
+.menu {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+.menu ul {
+  height: 100%;
+}
+.menu ul li {
+  flex: 1;
+  line-height: 60px;
+  height: 100%;
+  text-align: center;
+}
+.menu ul li:hover {
+  background-color: #D33257;
+}
+.menu ul li:hover a {
+  color: #BADA55;
+}
+.menu ul li a {
+  display: block;
+  height: 100%;
+  font-size: 20px;
+  color: #45362E;
+  text-decoration: none;
+}
+
+.container__section {
+  padding: 60px 0;
+}
+
+.section__accueil {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.section__bienvenue {
+  width: 50%;
+  padding: 40px 20px;
+  background-color: #D33257;
+}
+.section__bienvenue h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #BADA55;
+}
+.section__bienvenue p {
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+.section__service {
+  width: 50%;
+  padding: 40px 30px;
+  background-color: #BADA55;
+}
+.section__service div {
+  height: 60px;
+  margin: 5px 0;
+}
+.section__service div img {
+  width: auto;
+  height: 100%;
+}
+.section__service div p {
+  margin-left: 40px;
+  font-size: 16px;
+  font-style: italic;
+  color: #45362E;
+}
+
+.section__products {
+  max-width: 1280px;
+  height: 100%;
+  max-height: 640px;
+  margin: 10px auto;
+}
+
+.images {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+}
+.images img {
+  width: 100%;
+  height: auto;
+}
+
+.section__mineral {
+  width: 25%;
+  height: 640px;
+}
+.section__mineral .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #BADA55;
+  padding: 80px;
+}
+.section__mineral .btn {
+  width: 100%;
+  line-height: 50px;
+  height: 50px;
+  background-color: #D33257;
+  border-radius: 6px;
+  text-align: center;
+}
+.section__mineral .btn a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.section__vegetal {
+  width: 25%;
+  height: 640px;
+}
+.section__vegetal .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #D33257;
+  padding: 80px;
+}
+.section__vegetal .btn {
+  width: 100%;
+  line-height: 50px;
+  height: 50px;
+  background-color: #BADA55;
+  border-radius: 6px;
+  text-align: center;
+}
+.section__vegetal .btn a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.section__accessoire {
+  width: 25%;
+  height: 640px;
+}
+.section__accessoire img {
+  background-color: #BADA55;
+}
+.section__accessoire .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #45362E;
+  padding: 80px;
+}
+.section__accessoire .btn {
+  width: 100%;
+  line-height: 50px;
+  height: 50px;
+  background-color: #BADA55;
+  border-radius: 6px;
+  text-align: center;
+}
+.section__accessoire .btn a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.section__help {
+  width: 25%;
+  height: 640px;
+}
+.section__help img {
+  background-color: #BADA55;
+}
+.section__help .bg {
+  width: 100%;
+  height: 100%;
+  max-height: 320px;
+  background-color: #D33257;
+  padding: 80px;
+}
+.section__help .btn {
+  width: 100%;
+  line-height: 50px;
+  height: 50px;
+  background-color: #45362E;
+  border-radius: 6px;
+  text-align: center;
+}
+.section__help .btn a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.social__follow {
+  width: 150px;
+  align-self: stretch;
+  position: fixed;
+  top: 40%;
+  left: -108px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #D33257;
+  border-right: #45362E 2px solid;
+  padding: 5px;
+}
+
+.social__follow ul {
+  padding-left: 108px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social__follow ul li {
+  width: 30px;
+  height: 30px;
+  margin: 5px 0;
+}
+
+.social__follow ul li img {
+  width: 100%;
+  height: auto;
+}
+
+.container__footer {
+  width: 100%;
+  height: 300px;
+  background-color: #BADA55;
+}
+
+.footer {
+  max-width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+}
+.footer div {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 100px;
+  font-size: 16px;
+}
+.footer div:nth-child(1) {
+  background-color: #45362E;
+  text-align: center;
+}
+.footer div:nth-child(1) a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.footer div:nth-child(2) {
+  background-color: #D33257;
+  text-align: center;
+}
+.footer div:nth-child(2) a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.footer div:nth-child(3) {
+  background-color: #45362E;
+  text-align: center;
+}
+.footer div:nth-child(3) a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.footer div:nth-child(4) {
+  background-color: #D33257;
+  text-align: center;
+}
+.footer div:nth-child(4) a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.wrapper__copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-height: 64px;
+  height: auto;
+  line-height: 60px;
+  background-color: #45362E;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1280px;
+  height: 60px;
+  padding: 0;
+}
+
+.footer__copyright {
+  align-self: center;
+  height: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 300;
 }

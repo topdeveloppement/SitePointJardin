@@ -1,0 +1,299 @@
+/*-----------------------------------------------------------------*\
+*															  		*
+*	LES PROPRIÉTÉS SI DESSOUS S'APPLIQUE UNIQUEMENT AU CONTENEUR	*
+*															  		*		
+\*-----------------------------------------------------------------*/
+/*
+*
+*Avec la propriété display: et l'attribut flex le conteneur prendra toute la largeur disponible de la fenetre.
+*Avec la propriété flex-direction: et l'attribut column les elements qui vont ce trouver a l'interieur du conteneur, vont ce positionner les un en dessous des autres.
+*Avec l'attribut column-reverse le flux sera inversé.
+*
+*/
+.flex_col {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.flex_col-r {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: column-reverse;
+	    -ms-flex-direction: column-reverse;
+	        flex-direction: column-reverse;
+}
+/*
+*
+*Avec la propriété display: et l'attribut flex le conteneur prendra toute la largeur disponible de la fenetre.
+*Avec la propriété flex-direction: et l'attribut row les elements qui vont ce trouver a l'interieur du conteneur, vont ce positionner les un a coter des autres.
+*C'est le comportement par default.
+*Avec l'attribut row-reverse le flux sera inversé.
+*
+*/
+.flex_row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.flex_row-r {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: row-reverse;
+	    -ms-flex-direction: row-reverse;
+	        flex-direction: row-reverse;
+}
+/*
+*
+*Avec la propriété display: et l'attribut inline-flex le conteneur n'aura pas de largeur, ca largeur dependera de celle que on va lui fixer ou de ces elements enfant.
+*Avec la propriété flex-direction: et l'attribut column les elements qui vont ce trouver a l'interieur du conteneur, vont ce positionner les un en dessous des autres.
+*Avec l'attribut column-reverse le flux sera inversé.
+*
+*/
+.in_flex_col {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.in_flex_col-r {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: column-reverse;
+	    -ms-flex-direction: column-reverse;
+	        flex-direction: column-reverse;
+}
+/*
+*
+*Avec la propriété display: et l'attribut inline-flex le conteneur n'aura pas de largeur, ca largeur dependera de celle que on va lui fixer ou de ces elements enfant.
+*Avec la propriété flex-direction: et l'attribut row les elements qui vont ce trouver a l'interieur du conteneur, vont ce positionner les un a coter des autres.
+*C'est le comportement par default.
+*Avec l'attribut row-reverse le flux sera inversé.
+*
+*/
+.in_flex_row {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.in_flex_row-r {
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	-webkit-flex-direction: row-reverse;
+	    -ms-flex-direction: row-reverse;
+	        flex-direction: row-reverse;
+}
+/*
+*La propriété Justify-content
+*
+*Permet de positionner les elements enfants avec plusieur posibilité, en fonction de la propriété flex-direction.
+*Justify-content avec l'attribut flex-start et le comportement par default.
+*/
+.ju_con-fs {
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+.ju_con-fe {
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+.ju_con-c {
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.ju_con-sa {
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
+}
+.ju_con-sb {
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+/*
+*La propriété Align-items
+*
+Permet de positionner les elements enfants avec plusieur posibilité, en fonction de la propriété flex-direction.
+*Align-items avec l'attribut stretch et le comportement par default.
+*
+*/
+.al_it-fs {
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+}
+.al_it-fe {
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
+}
+.al_it-c {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.al_it-ba {
+	-webkit-box-align: baseline;
+	-webkit-align-items: baseline;
+	    -ms-flex-align: baseline;
+	        align-items: baseline;
+}
+.al_it-st {
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	    -ms-flex-align: stretch;
+	        align-items: stretch;
+}
+/*
+*Align-content
+*
+*Permet de positionner les elements enfants avec plusieur posibilité.
+*En fonction du Flex-direction.
+*
+*/
+.al_con-fs {
+	-webkit-align-content: flex-start;
+	    -ms-flex-line-pack: start;
+	        align-content: flex-start;
+}
+.al_con-fe {
+	-webkit-align-content: flex-end;
+	    -ms-flex-line-pack: end;
+	        align-content: flex-end;
+}
+.al_con-c {
+	-webkit-align-content: center;
+	    -ms-flex-line-pack: center;
+	        align-content: center;
+}
+.al_con-sb {
+	-webkit-align-content: space-between;
+	    -ms-flex-line-pack: justify;
+	        align-content: space-between;
+}
+.al_con-sa {
+	-webkit-align-content: space-around;
+	    -ms-flex-line-pack: distribute;
+	        align-content: space-around;
+}
+.al_con-st {
+	-webkit-align-content: stretch;
+	    -ms-flex-line-pack: stretch;
+	        align-content: stretch;
+}
+/*
+*Flex-wrap
+*
+*Permet de positionner les elements enfants avec plusieur posibilité.
+*En fonction du Flex-direction.
+*
+*/
+.flex_w {
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.flex_n-w {
+	-webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	        flex-wrap: nowrap;
+}
+.flex_w-r {
+	-webkit-flex-wrap: wrap-reverse;
+	    -ms-flex-wrap: wrap-reverse;
+	        flex-wrap: wrap-reverse;
+}
+/*-----------------------------------------------------------------*\
+*															  		*
+*	 LES PROPRIÉTÉS SI DESSOUS S'APPLIQUE UNIQUEMENT AUX ITEMS   	*
+*															  		*		
+\*-----------------------------------------------------------------*/
+.al_sel-auto {
+	-webkit-align-self: auto;
+	    -ms-flex-item-align: auto;
+	        align-self: auto;
+}
+.al_sel-fs {
+	-webkit-align-self: flex-start;
+	    -ms-flex-item-align: start;
+	        align-self: flex-start;	
+}
+.al_sel-fe {
+	-webkit-align-self: flex-end;
+	    -ms-flex-item-align: end;
+	        align-self: flex-end;
+}
+.al_sel-c {
+	-webkit-align-self: center;
+	    -ms-flex-item-align: center;
+	        align-self: center;	
+}
+.al_sel-st {
+	-webkit-align-self: stretch;
+	    -ms-flex-item-align: stretch;
+	        align-self: stretch;
+}
+.al_sel-ba {
+	-webkit-align-self: baseline;
+	    -ms-flex-item-align: baseline;
+	        align-self: baseline;
+}
+.al_sel-ini {
+	-webkit-align-self: initial;
+	    -ms-flex-item-align: initial;
+	        align-self: initial;
+}
+.al_sel-inh {
+	-webkit-align-self: inherit;
+	    -ms-flex-item-align: inherit;
+	        align-self: inherit;
+}
