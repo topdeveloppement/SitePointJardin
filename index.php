@@ -9,24 +9,20 @@
 	<title>Point Jardin ǀ Matériaux pour le Jardin ǀ Saint Rémy sur Avre</title>
 	<link rel="icon" href="icon/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link href='https://fonts.googleapis.com/css?family=Nunito:300,400' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<link rel="stylesheet" type="text/css" href="css/responvise.css">
 </head>
 <body>
+	<!-- Start Container Global -->
 	<div class="container__global">
-		<div class="container__header">
-			<header class="header">
-				<div class="logo">
-					<a href="index.html">
-						<img src="images/logo.png" alt="logo du site point jardin">
-					</a>
-				</div>
-				<div class="contact">
-					<p class="horaires">
-					</p>
-				</div>
-			</header>
-		</div>
-	</div>	
+	<?php include 'elements/social.php';?>
+	<?php include 'elements/header.php'; ?>
+	<?php include 'elements/menu.php'; ?>
+	<?php include 'elements/section.php'; ?>
+	<?php include 'elements/footer.php'; ?>
+	<?php include 'elements/copy.php'; ?>
+	</div>
+	<!-- End Container Global -->
 </body>
 </html>
